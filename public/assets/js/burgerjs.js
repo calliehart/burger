@@ -8,7 +8,7 @@ $(function() {
         $.ajax("/api/burgers/" + id, {
           type: "PUT",
           data: {
-              devoured: true
+              devoured: 1
           }
         }).then(
           function() {
@@ -24,8 +24,8 @@ $(function() {
         event.preventDefault();
     
         var newBurger = {
-          name: $("#name").val().trim(),
-          devoured: false
+          burger_name: $("#burgerName").val().trim(),
+          devoured: 0
         };
     
       
